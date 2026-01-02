@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTEBOL E MARRA EC - FME 21</title>
+    <meta name="description" content="Site oficial do FUTEBOL E MARRA EC (FME 21). Seja sócio, acompanhe notícias e apoie nosso time!">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <!-- HEADER FIXO -->
+    <header class="header" id="header">
+        <div class="header-top">
+            <span class="socios-count">⭐ JÁ SOMOS <strong id="socios-number">0</strong> SÓCIOS</span>
+        </div>
+        <div class="header-main">
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <a href="#/home" class="logo-link">
+                <img src="public/assets/img/8366afc35999503d87285a20b45ab081.jpg" alt="Logo FME 21" class="logo">
+            </a>
+            <button class="user-btn" id="user-btn" aria-label="Login">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+            <!-- Menu Desktop -->
+            <nav class="desktop-nav">
+                <a href="#/home">Início</a>
+                <a href="#/sponsors">Patrocinadores</a>
+                <a href="#/tickets">Ingressos</a>
+                <a href="#/shop">Loja</a>
+                <a href="#/login" class="nav-login">Entrar</a>
+            </nav>
+        </div>
+        <div class="header-actions">
+            <a href="#/tickets" class="action-btn">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 9a3 3 0 0 1 3 3v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a3 3 0 0 1 0-6V8a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1a3 3 0 0 1-3 3Z"></path>
+                </svg>
+                INGRESSOS
+            </a>
+            <a href="#/shop" class="action-btn">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                LOJA
+            </a>
+            <a href="#/membership" class="cta-btn">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+                SEJA SÓCIO
+            </a>
+        </div>
+    </header>
+
+    <!-- MENU LATERAL (Mobile) -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-btn" id="close-sidebar" aria-label="Fechar menu">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="sidebar-actions">
+            <a href="#/tickets" class="sidebar-action-btn">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 9a3 3 0 0 1 3 3v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a3 3 0 0 1 0-6V8a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1a3 3 0 0 1-3 3Z"></path>
+                </svg>
+                INGRESSOS
+            </a>
+            <a href="#/shop" class="sidebar-action-btn">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                LOJA
+            </a>
+            <a href="#/membership" class="sidebar-cta-btn">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+                SEJA SÓCIO
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>O CLUBE</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <a href="#/club/history">História</a>
+                    <a href="#/club/board">Diretoria</a>
+                    <a href="#/club/statute">Estatuto</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>NOTÍCIAS</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <a href="#/news/latest">Últimas</a>
+                    <a href="#/news/base">Base</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>COMERCIAL</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <a href="#/commercial/sponsorships">Patrocínios</a>
+                    <a href="#/commercial/partners">Parceiros</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>CANAIS OFICIAIS</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://youtube.com" target="_blank">YouTube</a>
+                    <a href="https://tiktok.com" target="_blank">TikTok</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>DIA DE JOGO</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <a href="#/matchday/location">Local</a>
+                    <a href="#/matchday/schedule">Horários</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>TRANSPARÊNCIA</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <a href="#/transparency/documents">Documentos</a>
+                </div>
+            </div>
+            <a href="#/faq" class="sidebar-link">PERGUNTAS FREQUENTES</a>
+            <a href="#/privacy" class="sidebar-link">POLÍTICAS DE PRIVACIDADE</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="social-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
+                </svg>
+            </a>
+            <a href="https://wa.me/5537999999999" target="_blank" aria-label="WhatsApp" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main" id="main-content">
+        <!-- HOME PAGE -->
+        <section class="page active" id="page-home">
+            <!-- CARROSSEL HERO -->
+            <div class="carousel" id="carousel">
+                <div class="carousel-track" id="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="public/assets/img/8366afc35999503d87285a20b45ab081.jpg" alt="Uniforme FME 21">
+                        <div class="slide-overlay">
+                            <h2>FUTEBOL E MARRA EC</h2>
+                            <p>Vista a camisa do nosso time!</p>
+                            <a href="#/shop" class="slide-cta">VER NA LOJA</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-sponsors-bg">
+                            <h2>NOSSOS PATROCINADORES</h2>
+                            <p>Empresas que acreditam no nosso time</p>
+                            <a href="#/sponsors" class="slide-cta">CONHECER</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-membership-bg">
+                            <h2>SEJA SÓCIO FME 21</h2>
+                            <p>Benefícios exclusivos para você</p>
+                            <a href="#/membership" class="slide-cta">QUERO SER SÓCIO</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" id="carousel-indicators"></div>
+                <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Slide anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Próximo slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- SEÇÃO SÓCIO -->
+            <section class="membership-section">
+                <div class="container">
+                    <h2 class="section-title">SÓCIO FME TEM<br><span class="highlight">ACESSO A BENEFÍCIOS</span></h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M16 8l-4 4-4-4"></path>
+                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
+                            <h3>Descontos em parceiros</h3>
+                            <p>Descontos exclusivos em lojas e estabelecimentos parceiros</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <h3>Prioridade em eventos</h3>
+                            <p>Acesso prioritário a jogos, eventos e confraternizações</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h3>Conteúdo exclusivo</h3>
+                            <p>Vídeos, bastidores e conteúdos especiais só para sócios</p>
+                        </div>
+                    </div>
+                    <a href="#/membership" class="cta-large">QUERO SER SÓCIO</a>
+                </div>
+            </section>
+
+            <!-- SEÇÃO PATROCINADORES -->
+            <section class="sponsors-section">
+                <div class="container">
+                    <h2 class="section-title">NOSSOS <span class="highlight">PATROCINADORES</span></h2>
+                    <div class="sponsors-grid" id="sponsors-grid">
+                        <!-- Preenchido via JS -->
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- LOGIN PAGE -->
+        <section class="page" id="page-login">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <img src="public/assets/img/274dbb8670cf70a8d38906261b887309.jpg" alt="Logo FME 21" class="login-logo">
+                        <h2>Entrar</h2>
+                        <p>Acesse sua conta de sócio</p>
+                    </div>
+                    <form id="login-form" class="login-form">
+                        <div class="form-group">
+                            <label for="login-email">E-mail</label>
+                            <input type="email" id="login-email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Senha</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="login-password" name="password" required placeholder="Sua senha">
+                                <button type="button" class="toggle-password" aria-label="Mostrar senha">
+                                    <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    <svg class="eye-closed hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#/forgot-password" class="forgot-password">Esqueceu sua senha?</a>
+                        <button type="submit" class="login-btn">CONTINUAR</button>
+                    </form>
+                    <div class="login-footer">
+                        <p>Ainda não é sócio? <a href="#/membership">Cadastre-se</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPONSORS PAGE -->
+        <section class="page" id="page-sponsors">
+            <div class="page-header">
+                <h1>Nossos Patrocinadores</h1>
+                <p>Conheça as empresas que apoiam o FME 21</p>
+            </div>
+            <div class="container">
+                <div class="sponsors-grid large" id="sponsors-grid-full">
+                    <!-- Preenchido via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- GENERIC PAGE (Tickets, Shop, Membership, etc) -->
+        <section class="page" id="page-generic">
+            <div class="generic-content">
+                <h1 id="generic-title">Página</h1>
+                <p id="generic-description">Conteúdo em breve...</p>
+                <a href="#/home" class="back-home">Voltar para Início</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- BOTÃO FLUTUANTE -->
+    <button class="floating-btn" id="floating-btn" aria-label="Fale com o time">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+    </button>
+
+    <!-- MODAL CONTATO -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Fale com o Time</h3>
+                <button class="modal-close" aria-label="Fechar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <form id="contact-form" class="modal-form">
+                <div class="form-group">
+                    <label for="contact-name">Nome</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">WhatsApp</label>
+                    <input type="tel" id="contact-phone" name="phone" required placeholder="(00) 00000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Mensagem</label>
+                    <textarea id="contact-message" name="message" required placeholder="Sua mensagem"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL PATROCINADOR -->
+    <div class="modal-overlay" id="sponsor-modal">
+        <div class="modal sponsor-modal-content">
+            <button class="modal-close" aria-label="Fechar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <img id="sponsor-modal-image" src="" alt="">
+            <h3 id="sponsor-modal-name"></h3>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="public/js/app.js"></script>
+</body>
+</html>
